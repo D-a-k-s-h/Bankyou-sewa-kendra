@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
+import BankYouLogo from '../Assets/Bank you logo.png';
 
 const Signup = () => {
 
@@ -26,7 +27,7 @@ const Signup = () => {
     <div className='w-[100vw] h-[100vh] font-michroma font-normal bg-gray-500 flex justify-center items-center bg-cover bg-center bg-no-repeat' style={{ backgroundImage: 'url("/background.jpg")' }}>
         <div className='w-1/2 bg-white rounded-md flex flex-col justify-center'>
             <div className='flex flex-row justify-evenly items-center p-1'>
-                <p>Banku sewa kendra</p>
+                <img src={BankYouLogo} alt='companyLogo' className='object-cover w-44'/>
                 <button className='btn btn-outline' onClick={() => navigate("/login")}>Login</button>
             </div>
             <div className='flex flex-row items-center'>

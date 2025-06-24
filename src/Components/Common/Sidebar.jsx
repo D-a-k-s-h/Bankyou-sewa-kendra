@@ -5,7 +5,7 @@ import { sidebarLinks } from "../../Assets/SidebarLinks";
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import * as Icons from 'react-icons/vsc'
 import { matchPath, NavLink, useLocation, useNavigate } from 'react-router-dom';
-import companyLogo from '../../Assets/company_logo.png';
+import BankYouLogo from '../../Assets/Bank you logo.png';
 
 const Sidebar = () => {
 
@@ -57,7 +57,7 @@ const Sidebar = () => {
         <div className={sidebarClasses}>
             <div className='w-full flex flex-row justify-between items-center px-2.5 py-[0.73rem] border-b border-b-lightGray'>
                 {/* <p className='text-lg'><CgMenu className="block md:hidden" onClick={() => setSidebarOpen(false)} /></p> */}
-                <img src={companyLogo} alt='companyLogo' className='object-cover aspect-square w-[12rem]  rounded-md h-10'/>
+                <img src={BankYouLogo} alt='companyLogo' className='object-cover w-44'/>
                 <button type='button' className='btn btn-sm btn-circle btn-error text-white text-lg'><RiLogoutCircleLine /></button>
             </div>
 
