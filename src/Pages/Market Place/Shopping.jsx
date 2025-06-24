@@ -100,11 +100,11 @@ const Shopping = () => {
                                 </div>
                                 <div className='flex flex-row justify-between items-center'>
                                     <p>{item?.warranty ? 'Warranty' : 'Connectivity'}</p>
-                                    <p className=''>{item?.warranty ? item.warranty : item.connectivity}</p>
+                                    <p>{item?.warranty ? item.warranty : item.connectivity}</p>
                                 </div>
                                 <div className='flex flex-row justify-between items-center'>
                                     <p>{item?.compatibility ? 'Compatibility' : 'Delivery'}</p>
-                                    <p className='text-sm'>{item?.compatibility ? item.compatibility : item.delivery}</p>
+                                    <p>{item?.compatibility ? item.compatibility : item.delivery}</p>
                                 </div>
                                 <p className='text-sm py-2 text-gray-600'>{item.description}</p>
                                 <button type='button' className='w-full btn btn-primary'>Buy Now</button>
