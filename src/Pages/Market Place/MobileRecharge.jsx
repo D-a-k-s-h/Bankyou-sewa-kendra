@@ -15,11 +15,8 @@ const MobileRecharge = () => {
     const [planModal, setPlanModal] = useState(null);
     const [operatorName, setOpeatorName] = useState("");
     const [rechargeSummary,setRechargeSummary] = useState(null);
+    const [selectedPlan, setSelectedPlan] = useState({});
     
-    const location = useLocation();
-    const price = location?.state?.planObj?.planPrice;
-    console.log("Price -> ",price);
-
     const{
         register,
         control,
@@ -41,6 +38,7 @@ const MobileRecharge = () => {
 
         reset();
         setOpeatorName(null);
+        setSelectedPlan(null);
     }
 
   return (
@@ -53,8 +51,8 @@ const MobileRecharge = () => {
             <div className='w-full flex p-4 flex-row gap-5 items-start'>
                 <div className='w-full flex flex-col'>
                     <div className='flex flex-row gap-5 border border-gray-300 p-3'>
-                        <p onClick={() => setTab("Mobile Recharge")} className={`${tab === 'Mobile Recharge' ? 'font-semibold border-b-4 border-b-dark' : 'text-gray-400'} cursor-pointer`}>Mobile Recharge</p>
-                        <p onClick={() => setTab("DTH Recharge")} className={`${tab === 'DTH Recharge' ? 'font-semibold border-b-4 border-b-dark' : 'text-gray-400'} cursor-pointer`}>DTH Recharge</p>
+                        <p onClick={() => setTab("Mobile Recharge")} className={`${tab === 'Mobile Recharge' ? 'font-semibold border-b-4 border-b-dark' : 'text-gray-400'} cursor-pointer hover:text-gray-700`}>Mobile Recharge</p>
+                        <p onClick={() => setTab("DTH Recharge")} className={`${tab === 'DTH Recharge' ? 'font-semibold border-b-4 border-b-dark' : 'text-gray-400'} cursor-pointer hover:text-gray-700`}>DTH Recharge</p>
                     </div>
                     <div className='w-full p-3 border border-gray-300 flex flex-row justify-between'>
                         {
@@ -105,7 +103,7 @@ const MobileRecharge = () => {
                                                 {...register('amount',{required:true})}
                                                 type='number'
                                                 defaultValue={null}
-                                                value={operatorName ? price : null}
+                                                value={selectedPlan ? selectedPlan?.planPrice : null}
                                                 readOnly
                                                 className='p-2 pl-8 border border-gray-300 rounded-md bg-white text-dark'
                                             />
@@ -119,7 +117,65 @@ const MobileRecharge = () => {
                                     </form>
                                 </div>
                             ) : (
-                                <div></div>
+                                <div className='w-full'>
+                                    <form className='w-full flex flex-col gap-4' onSubmit={handleSubmit(submitHandler)}>
+                                        <div className='flex flex-col'>
+                                            <label htmlFor='operator'>Select DTH Operator</label>
+                                            <Controller
+                                                name='operator'
+                                                control={control}
+                                                defaultValue={null}
+                                                rules={{ required: 'Operator is required' }}
+                                                render={({field}) => (
+                                                    <Select
+                                                        {...field}
+                                                        isClearable
+                                                        isSearchable
+                                                        options={operatorOptions}
+                                                        className='text-dark rounded-md w-full'
+                                                        onChange={(e) => {
+                                                            field.onChange(e);
+                                                            setOpeatorName(e ? e.value : "");
+                                                        }}
+                                                    />
+                                                )}
+                                            />
+                                        </div>
+
+                                        <div className='flex flex-col relative'>
+                                            <label htmlFor='mobileNo'>Mobile No</label>
+                                            <input
+                                                name='mobileNo'
+                                                className='p-2 pl-7 rounded-md border border-gray-300 text-dark bg-white'
+                                                placeholder='Enter mobile no'
+                                                {...register('mobileNo',{required:true})}
+                                                type='tel'
+                                                required
+                                            />
+                                            <CiMobile3 className='absolute top-[2.35rem] left-2'/>
+                                        </div>
+
+                                        <div className='flex flex-col relative'>
+                                            <label htmlFor='amount'>Amount<span className='cursor-pointer text-gray-500 pl-1.5 text-xs' onClick={() => setPlanModal({operatorName:operatorName ? operatorName : alert("Please Choose Operator First")})}>See Plan</span></label>
+                                            <input
+                                                name='amount'
+                                                placeholder='Click see plan to choose plan'
+                                                {...register('amount',{required:true})}
+                                                type='number'
+                                                defaultValue={null}
+                                                value={selectedPlan ? selectedPlan?.planPrice : null}
+                                                readOnly
+                                                className='p-2 pl-8 border border-gray-300 rounded-md bg-white text-dark'
+                                            />
+                                            <LuIndianRupee className='absolute top-[2.35rem] left-2'/>
+                                        </div>
+
+                                        <div className='flex flex-row gap-4'>
+                                            <button type='submit' className='btn btn-success'>Recharge</button>
+                                            <button type='button' className='btn' onClick={() => {reset(); setOpeatorName(null);}}>Cancel</button>  
+                                        </div>
+                                    </form>
+                                </div>
                             )
                         }
                     </div>
@@ -127,7 +183,7 @@ const MobileRecharge = () => {
                 <RecentTransactions/>
             </div>
         </div>
-        {planModal && <PlanModal planModal={planModal} setPlanModal={setPlanModal}/>}
+        {planModal && <PlanModal planModal={planModal} setPlanModal={setPlanModal} setSelectedPlan={setSelectedPlan} selectedPlan={selectedPlan}/>}
         {rechargeSummary && <RechargeSummary rechargeSummary={rechargeSummary} setRechargeSummary={setRechargeSummary}/>}
     </div>
   )

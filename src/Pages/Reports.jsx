@@ -95,7 +95,7 @@ const Reports = () => {
                 </form>
 
                 <div className='relative w-full h-full overflow-x-auto'>
-                    <div className='w-full max-w-[1200px] mx-auto'>
+                    <div className='w-[1200px] mx-auto'>
                         <MUIDataTable
                             title={"Transaction Reports"}
                             columns={columns}

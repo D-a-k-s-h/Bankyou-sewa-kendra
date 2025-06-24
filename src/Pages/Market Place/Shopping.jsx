@@ -20,7 +20,7 @@ const shoppingData = [
         price: '4,499',
         image: "https://www.thalesgroup.com/sites/default/files/database/assets/images/2022-02/biometric_fingerprint_scanners_CS500f.png",
         description: "Compact and secure biometric fingerprint scanner ideal for EKYC, Aadhar, authentication, and secure login systems.",
-        compatibility: "Compatible with Windows and android",
+        compatibility: "Windows and android",
         connectivity: "USB and Bluetooth",
         status: "In Stock",
         model: "BioScan FX200"
@@ -54,7 +54,7 @@ const shoppingData = [
         price: '4,499',
         image: "https://www.thalesgroup.com/sites/default/files/database/assets/images/2022-02/biometric_fingerprint_scanners_CS500f.png",
         description: "Compact and secure biometric fingerprint scanner ideal for EKYC, Aadhar, authentication, and secure login systems.",
-        compatibility: "Compatible with Windows and android",
+        compatibility: "Windows and android",
         connectivity: "USB and Bluetooth",
         status: "In Stock",
         model: "BioScan FX200"
@@ -86,27 +86,27 @@ const Shopping = () => {
                         <div key={item.id} className='w-full h-full bg-white rounded-lg shadow-md p-4 flex flex-col gap-2'>
                             <div className='w-full flex flex-row justify-between items-center'>
                                 <p>{item.name}</p>
-                                <p className='text-sm text-gray-500'>{item.model}</p>
+                                <p className={`${item.status === 'In Stock' ? 'rounded-md bg-success p-1 text-xs ' : ' rounded-md bg-error text-xs p-1'} text-white`}>{item.status}</p>
                             </div>
                             <img src={item.image} alt={item.name} className='w-full h-40 object-fill rounded-md mb-2' />
                             <div className='w-full flex flex-col gap-1'>
                                 <div className='flex flex-row justify-between items-center'>
-                                    <p>Status</p>
-                                    <p className={`${item.status === 'In Stock' ? 'rounded-md bg-success p-1 text-xs ' : ' rounded-md bg-error text-xs p-1'} text-white`}>{item.status}</p>
+                                    <p>Model</p>
+                                    <p className='text-sm'>{item.model}</p>
                                 </div>
                                 <div className='flex flex-row justify-between items-center'>
                                     <p>Price</p>
-                                    <p className='font-semibold text-primary'>₹{item.price}</p>
+                                    <p className='font-semibold'>₹{item.price}</p>
                                 </div>
                                 <div className='flex flex-row justify-between items-center'>
                                     <p>{item?.warranty ? 'Warranty' : 'Connectivity'}</p>
-                                    <p className='text-gray-500'>{item?.warranty ? item.warranty : item.connectivity}</p>
+                                    <p className=''>{item?.warranty ? item.warranty : item.connectivity}</p>
                                 </div>
                                 <div className='flex flex-row justify-between items-center'>
-                                    <p >{item?.compatibility ? 'Compatibility' : 'Delivery'}</p>
-                                    <p className='text-sm text-gray-500'>{item?.compatibility ? item.compatibility : item.delivery}</p>
+                                    <p>{item?.compatibility ? 'Compatibility' : 'Delivery'}</p>
+                                    <p className='text-sm'>{item?.compatibility ? item.compatibility : item.delivery}</p>
                                 </div>
-                                <p className='text-sm pt-2 text-gray-500'>{item.description}</p>
+                                <p className='text-sm py-2 text-gray-600'>{item.description}</p>
                                 <button type='button' className='w-full btn btn-primary'>Buy Now</button>
                             </div>
                         </div>

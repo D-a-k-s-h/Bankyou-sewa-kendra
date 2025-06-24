@@ -16,7 +16,7 @@ import miniWebLogo from '../Assets/mini website.png';
 import loanServiceLogo from '../Assets/loan service logo.jpg';
 import aepsServiceLogo from '../Assets/aeps service logojpg.jpg'
 import addFundLogo from '../Assets/add fund logo.jpg';
-import bankLogo from '../Assets/Banku logo.jpg';
+import bankLogo from '../Assets/Banku_logo.png';
 import { useNavigate } from 'react-router-dom';
 import RecentTransactions from '../Components/Common/RecentTransactions';
 
@@ -94,9 +94,9 @@ const Homepage = () => {
     <div className='w-full h-full pb-10 bg-lightGray overflow-auto'>
         <Navbar/>
         <div className='w-full px-4 flex flex-col justify-center font-normal'>
-          <div className='w-full flex flex-row gap-20 px-10 p-5 items-center'>
+          <div className='w-full flex flex-row gap-14 px-10 p-5 items-center'>
             {/* CARD 1 */}
-            <div className='w-full p-3 flex flex-col gap-7 text-lightGray rounded-xl bg-gradient-to-t from-violet-700 to-violet-400'>
+            <div className='w-full p-3 flex flex-col gap-7 text-lightGray rounded-xl bg-gradient-to-tr from-violet-800 to-purple-300'>
               
               <div className='w-full flex flex-row justify-between'>
                 <div className='flex flex-col'>
@@ -116,7 +116,7 @@ const Homepage = () => {
             </div>
 
             {/* CARD 2 */}
-            <div className='w-full flex flex-col gap-7 rounded-xl text-lightGray p-3 bg-gradient-to-t from-pink-600 to-pink-400'>
+            <div className='w-full flex flex-col gap-7 rounded-xl text-lightGray p-3 bg-gradient-to-tr from-rose-700 to-red-400'>
               <div className='flex flex-row justify-between'>
                 <div className='flex flex-col'>
                   <p className='font-semibold text-lg'>Outlet Limit</p>

@@ -102,7 +102,7 @@ const BillPayment = () => {
                     <div className='w-full flex flex-row gap-5 border border-gray-300 p-3'>
                         {
                             tabData.map((data) => (
-                                <p className={`${tab === data.name ? 'font-semibold border-b-4 border-b-dark' : 'text-gray-400'} cursor-pointer`} key={data.id} onClick={() => {setTab(data.name); reset();}}>{data.name}</p>
+                                <p className={`${tab === data.name ? 'font-semibold border-b-4 border-b-dark' : 'text-gray-400'} cursor-pointer hover:text-gray-700 transition-all duration-100`} key={data.id} onClick={() => {setTab(data.name); reset();}}>{data.name}</p>
                             ))
                         }
                     </div>
