@@ -15,6 +15,7 @@ import Shopping from "./Pages/Market Place/Shopping";
 import Resources from "./Pages/My Account/Resources";
 import Reports from "./Pages/Reports";
 import Profile from "./Pages/My Account/Profile";
+import DomesticMoneyTransfer from "./Pages/Neo Bank/DomesticMoneyTransfer";
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/my-account/resources" element={<Resources/>}/>
           <Route path="/reports" element={<Reports/>}/>
           <Route path="/my-account/profile" element={<Profile/>}/>
+          <Route path="/neo-bank/domestic-money-transfer" element={<DomesticMoneyTransfer/>}/>
           <Route path="*" element={<ErrorPage/>}/>
         </Route>
       </Routes>

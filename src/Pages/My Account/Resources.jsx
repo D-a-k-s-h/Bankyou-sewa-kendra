@@ -37,7 +37,7 @@ const resourcesData = [
 
 const Resources = () => {
   return (
-    <div className='w-full h-full overflow-auto bg-lightGray text-dark font-michroma'>
+    <div className='w-full h-full overflow-auto bg-lightGray text-black font-michroma'>
       <Navbar/>
       <div className='w-full h-full flex flex-col gap-4'>
         <p className='px-5 pt-4'>Home / <span className='font-semibold'>Resources</span></p>
@@ -48,8 +48,8 @@ const Resources = () => {
                 <p className='w-full font-semibold'>{resource.title}</p>
                 <p className='w-full border p-4 text-gray-500 text-sm'>{resource.description}</p>
                 <div className='w-full flex flex-row items-center gap-5 mt-2'>
-                  <button type='button' className='w-full p-2 text-lightGray bg-dark rounded-md flex flex-row items-center justify-center gap-4'>Download <FaLongArrowAltUp/></button>
-                  <button type='button' className='w-full p-2 text-dark bg-lightGray rounded-md flex flex-row items-center justify-center gap-3'><FaLongArrowAltDown/> View</button>
+                  <button type='button' className='w-full p-2 text-black bg-custom_pink rounded-md flex flex-row items-center justify-center gap-4'>Download <FaLongArrowAltUp/></button>
+                  <button type='button' className='w-full p-2 text-black bg-lightGray rounded-md flex flex-row items-center justify-center gap-3'><FaLongArrowAltDown/> View</button>
                 </div>
               </div>
             ))

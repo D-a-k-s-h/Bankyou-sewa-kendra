@@ -28,7 +28,6 @@ const Signup = () => {
         <div className='w-1/2 bg-white rounded-md flex flex-col justify-center'>
             <div className='flex flex-row justify-evenly items-center p-1'>
                 <img src={BankYouLogo} alt='companyLogo' className='object-cover w-44'/>
-                <button className='btn btn-outline' onClick={() => navigate("/login")}>Login</button>
             </div>
             <div className='flex flex-row items-center'>
                 {/* IMAGE SLIDER */}
@@ -37,7 +36,7 @@ const Signup = () => {
                 <form className='flex flex-col gap-5 bg-black text-white p-4 rounded-br-md' onSubmit={handleSubmit(submitHandler)}>
                     <div className='flex flex-col gap-4'>
                         <p className='text-2xl font-semibold'>Create a new account</p>
-                        <p className='text-gray-400'>Already have an account? <Link to={"/login"} className='hover:underline'>Login</Link></p>
+                        
                     </div>
 
                     <div className='flex flex-col gap-3'>
@@ -95,6 +94,8 @@ const Signup = () => {
                         </div>
 
                         <button type='submit' className='btn btn-outline text-white'>Sign up</button>
+
+                        <p className='text-white'>Already have an account? <Link to={"/login"} className='hover:underline'>Login</Link></p>
                     </div>
                 </form>
             </div>

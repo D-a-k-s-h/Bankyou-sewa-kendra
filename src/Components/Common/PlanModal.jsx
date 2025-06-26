@@ -15,11 +15,11 @@ const PlanModal = ({planModal, setPlanModal,selectedPlan,setSelectedPlan}) => {
     <>
       {planModal.operatorName && (
         <div className='fixed w-screen inset-0 z-[1000] !mt-0 grid place-items-center overflow-auto bg-white bg-opacity-10 backdrop-blur-sm'>
-          <div className='mx-auto flex flex-col text-lg gap-4 py-5 px-10 pb-12 rounded-md border border-lightGray bg-dark text-lightGray'>
+          <div className='mx-auto flex flex-col text-lg gap-4 py-5 px-10 pb-12 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] bg-custom_pink text-black'>
             <p className='font-semibold'>{planModal.operatorName}</p>
             <div className='w-full'>
-              <Table className='w-full border border-lightGray rounded-md'>
-                <Thead className='bg-lightGray text-dark'>
+              <Table className='w-full border border-black rounded-md'>
+                <Thead className='bg-black text-white'>
                   <Tr className='p-2'>
                     <Th className='text-right py-1 px-8'>Select</Th>
                     <Th className='text-left py-1 pr-20'>Plan Name</Th>
@@ -43,7 +43,7 @@ const PlanModal = ({planModal, setPlanModal,selectedPlan,setSelectedPlan}) => {
                         })}
                         id='basicPlan'
                         name='plan'
-                        checked={selectedPlan.planType === "Basic Plan"}
+                        checked={selectedPlan?.planType === "Basic Plan"}
                         onChange={handleChange}
                       />
                     </Td>
@@ -66,7 +66,7 @@ const PlanModal = ({planModal, setPlanModal,selectedPlan,setSelectedPlan}) => {
                         })}
                         id='standardPlan'
                         name='plan'
-                        checked={selectedPlan.planType === "Standard Plan"}
+                        checked={selectedPlan?.planType === "Standard Plan"}
                         onChange={handleChange}
                       />
                     </Td>
@@ -89,7 +89,7 @@ const PlanModal = ({planModal, setPlanModal,selectedPlan,setSelectedPlan}) => {
                         })}
                         id='premiumPlan'
                         name='plan'
-                        checked={selectedPlan.planType === "Premium Plan"}
+                        checked={selectedPlan?.planType === "Premium Plan"}
                         onChange={handleChange}
                       />
                     </Td>

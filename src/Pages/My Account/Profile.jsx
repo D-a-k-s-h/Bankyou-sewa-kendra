@@ -112,7 +112,7 @@ const bankingDetails = [
 
 const Profile = () => {
   return (
-    <div className='w-full h-full bg-lightGray overflow-auto text-dark'>
+    <div className='w-full h-full bg-lightGray overflow-auto text-black'>
         <Navbar/>
         <div className='w-full flex p-2 scroll-pb-10 flex-col gap-4'>
             <div className='w-full border border-gray-500 rounded-md flex flex-col gap-1'>
@@ -147,14 +147,14 @@ const Profile = () => {
                 </div>
 
                 <div className='w-full h-full flex flex-row gap-2 items-start p-2'>
-                    <div className='w-full flex flex-col gap-1 p-2 border border-dark rounded-md'>
+                    <div className='w-full flex flex-col gap-1 p-2 border border-custom_pink rounded-md'>
                         <p className='font-semibold'>Personal Profile Summary</p>
                         <p className='text-sm text-gray-500'>Below is the personal profile summary</p>
                         <div className='w-full flex flex-col gap-2'>
                             {
                                 personalProfileSummary.map((data) => (
                                     <div key={data.id} className='w-full text-sm flex flex-row justify-between items-center border-b border-b-gray-300 py-2'>
-                                        <p className='text-dark uppercase'>{data.title}</p>
+                                        <p className='text-black uppercase'>{data.title}</p>
                                         <p className='font-semibold text-gray-500'>{data.value}</p>
                                     </div>
                                 ))
@@ -162,14 +162,14 @@ const Profile = () => {
                         </div>
                     </div>
 
-                    <div className='w-full flex flex-col gap-1 border border-dark rounded-md p-2'>
+                    <div className='w-full flex flex-col gap-1 border border-custom_pink rounded-md p-2'>
                         <p className='font-semibold'>Business Details</p>
                         <p className='text-gray-500 text-sm'>Provide your business name,type and registration details</p>
                         <div className='w-full flex flex-col gap-2'>
                             {
                                 businessDetails.map((data) => (
                                     <div key={data.id} className='w-full text-sm flex flex-row justify-between items-center border-b border-b-gray-300 py-2'>
-                                        <p className='text-dark uppercase'>{data.title}</p>
+                                        <p className='text-black uppercase'>{data.title}</p>
                                         <p className='font-semibold text-gray-500'>{data.value}</p>
                                     </div>
                                 ))
@@ -177,14 +177,14 @@ const Profile = () => {
                         </div>
                     </div>
 
-                    <div className='w-full flex flex-col gap-1 p-2 border border-dark rounded-md'>
+                    <div className='w-full flex flex-col gap-1 p-2 border border-custom_pink rounded-md'>
                         <p className='font-semibold'>Banking Details</p>
                         <p className='text-sm text-gray-500'>Provide your bank account details for transactions</p>
                         <div className='w-full flex flex-col gap-2'>
                             {
                                 bankingDetails.map((data) => (
                                     <div key={data.id} className='w-full text-sm flex flex-row justify-between items-center border-b border-b-gray-300 py-2'>
-                                        <p className='text-dark uppercase'>{data.title}</p>
+                                        <p className='text-black uppercase'>{data.title}</p>
                                         <p className='font-semibold text-gray-500'>{data.value}</p>
                                     </div>
                                 ))

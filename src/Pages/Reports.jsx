@@ -38,7 +38,7 @@ const Reports = () => {
     };
 
   return (
-    <div className='w-full h-full overflow-auto bg-lightGray text-dark'>
+    <div className='w-full h-full overflow-auto bg-lightGray text-black'>
         <Navbar/>
         <div className='w-full h-full flex flex-col gap-5'>
             <p className='px-5 pt-4'>Home / <span className='font-semibold'>Reports</span></p>
@@ -84,7 +84,7 @@ const Reports = () => {
                                             { value: 'electricity', label: 'Electricity Bill' },
                                             { value: 'water', label: 'Water Bill' }
                                         ]}
-                                        className='text-dark rounded-md w-full'
+                                        className='text-black rounded-md w-full'
                                     /> 
                                 )}
                             />

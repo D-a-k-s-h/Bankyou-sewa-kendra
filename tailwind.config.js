@@ -15,10 +15,10 @@ module.exports = {
         light: 300,
       },
       colors:{
-        dark: "#0B1D51",
+        custom_pink: "#F6F4F0",
         darkBlue: "#7F8CAA",
         lightGreen: "#B8CFCE",
-        lightGray: "#EAEFEF"
+        lightGray: "#FFF"
       }
     },
   },

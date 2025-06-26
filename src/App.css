@@ -41,7 +41,7 @@ html,body{
 }
 @media print {
 
-  /* Make all paragraph text dark gray */
+  /* Make all paragraph text custom_pink gray */
   p {
     color: #000 !important;
     font-weight: normal;

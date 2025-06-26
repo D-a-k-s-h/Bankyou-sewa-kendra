@@ -41,8 +41,14 @@ const MobileRecharge = () => {
         setSelectedPlan(null);
     }
 
+    const cancelHandler = () => {
+        reset();
+        setSelectedPlan({});
+        setOpeatorName(null);
+    }
+
   return (
-    <div className='w-full h-full pb-10 overflow-auto bg-lightGray text-dark'>
+    <div className='w-full h-full pb-10 overflow-auto bg-lightGray text-black'>
         <Navbar/>
         <div className='w-full h-full flex flex-col gap-4'>
             <p className='px-5 py-4'>Home / <span className='font-semibold'>Recharge</span></p>
@@ -51,8 +57,8 @@ const MobileRecharge = () => {
             <div className='w-full flex p-4 flex-row gap-5 items-start'>
                 <div className='w-full flex flex-col'>
                     <div className='flex flex-row gap-5 border border-gray-300 p-3'>
-                        <p onClick={() => setTab("Mobile Recharge")} className={`${tab === 'Mobile Recharge' ? 'font-semibold border-b-4 border-b-dark' : 'text-gray-400'} cursor-pointer hover:text-gray-700`}>Mobile Recharge</p>
-                        <p onClick={() => setTab("DTH Recharge")} className={`${tab === 'DTH Recharge' ? 'font-semibold border-b-4 border-b-dark' : 'text-gray-400'} cursor-pointer hover:text-gray-700`}>DTH Recharge</p>
+                        <p onClick={() => setTab("Mobile Recharge")} className={`${tab === 'Mobile Recharge' ? 'font-semibold border-b-4 border-b-black' : 'text-gray-400'} cursor-pointer hover:text-gray-700`}>Mobile Recharge</p>
+                        <p onClick={() => setTab("DTH Recharge")} className={`${tab === 'DTH Recharge' ? 'font-semibold border-b-4 border-b-black' : 'text-gray-400'} cursor-pointer hover:text-gray-700`}>DTH Recharge</p>
                     </div>
                     <div className='w-full p-3 border border-gray-300 flex flex-row justify-between'>
                         {
@@ -72,7 +78,7 @@ const MobileRecharge = () => {
                                                         isClearable
                                                         isSearchable
                                                         options={operatorOptions}
-                                                        className='text-dark rounded-md w-full'
+                                                        className='text-black rounded-md w-full'
                                                         onChange={(e) => { 
                                                             field.onChange(e);
                                                             setOpeatorName(e ? e.value : "");
@@ -86,7 +92,7 @@ const MobileRecharge = () => {
                                             <label htmlFor='mobileNo'>Mobile No</label>
                                             <input
                                                 name='mobileNo'
-                                                className='p-2 pl-7 rounded-md border border-gray-300 text-dark bg-white'
+                                                className='p-2 pl-7 rounded-md border border-gray-300 text-black bg-white'
                                                 placeholder='Enter mobile no'
                                                 {...register('mobileNo',{required:true})}
                                                 type='tel'
@@ -102,16 +108,15 @@ const MobileRecharge = () => {
                                                 placeholder='Click see plan to choose plan'
                                                 {...register('amount',{required:true})}
                                                 type='number'
-                                                defaultValue={null}
-                                                value={selectedPlan ? selectedPlan?.planPrice : null}
+                                                value={selectedPlan?.planPrice || ""}
                                                 readOnly
-                                                className='p-2 pl-8 border border-gray-300 rounded-md bg-white text-dark'
+                                                className='p-2 pl-8 border border-gray-300 rounded-md bg-white text-black'
                                             />
                                             <LuIndianRupee className='absolute top-[2.35rem] left-2'/>
                                         </div>
 
                                         <div className='flex flex-row gap-4'>
-                                            <button type='submit' className='btn btn-success'>Recharge</button>
+                                            <button type='submit' className='btn btn-success text-white'>Recharge</button>
                                             <button type='button' className='btn' onClick={() => {reset(); setOpeatorName(null);}}>Cancel</button>
                                         </div>
                                     </form>
@@ -132,7 +137,7 @@ const MobileRecharge = () => {
                                                         isClearable
                                                         isSearchable
                                                         options={operatorOptions}
-                                                        className='text-dark rounded-md w-full'
+                                                        className='text-black rounded-md w-full'
                                                         onChange={(e) => {
                                                             field.onChange(e);
                                                             setOpeatorName(e ? e.value : "");
@@ -146,7 +151,7 @@ const MobileRecharge = () => {
                                             <label htmlFor='mobileNo'>Mobile No</label>
                                             <input
                                                 name='mobileNo'
-                                                className='p-2 pl-7 rounded-md border border-gray-300 text-dark bg-white'
+                                                className='p-2 pl-7 rounded-md border border-gray-300 text-black bg-white'
                                                 placeholder='Enter mobile no'
                                                 {...register('mobileNo',{required:true})}
                                                 type='tel'
@@ -162,17 +167,16 @@ const MobileRecharge = () => {
                                                 placeholder='Click see plan to choose plan'
                                                 {...register('amount',{required:true})}
                                                 type='number'
-                                                defaultValue={null}
-                                                value={selectedPlan ? selectedPlan?.planPrice : null}
+                                                value={selectedPlan?.planPrice || ""}
                                                 readOnly
-                                                className='p-2 pl-8 border border-gray-300 rounded-md bg-white text-dark'
+                                                className='p-2 pl-8 border border-gray-300 rounded-md bg-white text-black'
                                             />
                                             <LuIndianRupee className='absolute top-[2.35rem] left-2'/>
                                         </div>
 
                                         <div className='flex flex-row gap-4'>
-                                            <button type='submit' className='btn btn-success'>Recharge</button>
-                                            <button type='button' className='btn' onClick={() => {reset(); setOpeatorName(null);}}>Cancel</button>  
+                                            <button type='submit' className='btn btn-success text-white'>Recharge</button>
+                                            <button type='button' className='btn' onClick={() => {cancelHandler()}}>Cancel</button>  
                                         </div>
                                     </form>
                                 </div>

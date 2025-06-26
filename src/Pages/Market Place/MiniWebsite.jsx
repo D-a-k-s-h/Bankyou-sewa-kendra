@@ -23,7 +23,7 @@ const MiniWebsite = () => {
     }
 
   return (
-    <div className='w-full h-full flex flex-col overflow-auto bg-lightGray text-dark'>
+    <div className='w-full h-full flex flex-col overflow-auto bg-lightGray text-black'>
         <Navbar/>
         <div className='w-full h-full flex flex-col gap-4 px-4'>
             <p className='px-4 pt-4'>Home / <span className='font-semibold'>Mini Website</span></p>
@@ -136,7 +136,7 @@ const MiniWebsite = () => {
                                 className='w-full p-2 border bg-white border-gray-300 rounded-md pl-8'
                                 placeholder='Enter Instagram Link'
                             />
-                            <BsInstagram className='absolute top-[2.3rem] left-2 text-lg text-pink-500'/>
+                            <BsInstagram className='absolute top-[2.3rem] left-2 text-lg text-error'/>
                         </div>
                     </div>
 
@@ -184,7 +184,7 @@ const MiniWebsite = () => {
 
                     {/* SUBMIT BUTTON */}
                     <div className='w-full flex justify-start gap-4'>
-                        <button type='submit' className='btn btn-success'>Save</button>
+                        <button type='submit' className='btn btn-success text-white'>Save</button>
                         <button type='reset' className='btn btn-outline' onClick={() => reset()}>Reset</button>
                     </div>
                 </form>

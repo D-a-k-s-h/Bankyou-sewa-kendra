@@ -74,7 +74,7 @@ const shoppingData = [
 
 const Shopping = () => {
   return (
-    <div className='w-full h-full overflow-auto pb-10 flex flex-col bg-lightGray text-dark'>
+    <div className='w-full h-full overflow-auto flex flex-col bg-lightGray text-black'>
         <Navbar/>
         <div className='w-full h-full flex flex-col gap-4 px-4'>
             <p className='px-4 pt-4'>Home / <span className='font-semibold'>Products</span></p>
@@ -83,7 +83,7 @@ const Shopping = () => {
             <div className='w-full h-full grid grid-cols-1 md:grid-cols-3 gap-4'>
                 {
                     shoppingData.map((item) => (
-                        <div key={item.id} className='w-full h-full bg-white rounded-lg shadow-md p-4 flex flex-col gap-2'>
+                        <div key={item.id} className='w-full h-full bg-white rounded-lg shadow-sm shadow-black p-4 flex flex-col gap-2'>
                             <div className='w-full flex flex-row justify-between items-center'>
                                 <p>{item.name}</p>
                                 <p className={`${item.status === 'In Stock' ? 'rounded-md bg-success p-1 text-xs ' : ' rounded-md bg-error text-xs p-1'} text-white`}>{item.status}</p>

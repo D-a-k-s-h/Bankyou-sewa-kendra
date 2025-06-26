@@ -39,7 +39,7 @@ const CreditCardBill = () => {
     };
 
   return (
-    <div className='w-full h-full flex flex-col overflow-auto pb-10 bg-lightGray text-dark'>
+    <div className='w-full h-full flex flex-col overflow-auto pb-10 bg-lightGray text-black'>
         <Navbar/>
         <div className='w-full h-full flex flex-col gap-4'>
             <p className='px-5 py-4'>Home / <span className='font-semibold'>Bill Payment</span></p>
@@ -48,7 +48,7 @@ const CreditCardBill = () => {
             <div className='w-full flex flex-row gap-5 items-start p-4'>
                 <div className='w-full flex flex-col gap-4'> 
                     <div className='w-full flex flex-row gap-5 border border-gray-300 p-3'>
-                        <p className={`font-semibold border-b-4 border-b-dark cursor-pointer`}>Credit Card Bill</p>    
+                        <p className={`font-semibold border-b-4 border-b-black cursor-pointer`}>Credit Card Bill</p>    
                     </div>
                     <div className='w-full p-3 border border-gray-300'>
                         <form className='w-full flex flex-col gap-4' onSubmit={handleSubmit(submitHandler)}>
@@ -65,7 +65,7 @@ const CreditCardBill = () => {
                                             isClearable
                                             isSearchable
                                             options={operatorOptions}
-                                            className='text-dark rounded-md w-full'
+                                            className='text-black rounded-md w-full'
                                         />
                                     )}
                                 />
@@ -77,7 +77,7 @@ const CreditCardBill = () => {
                                     type='number' 
                                     id='cardNo' 
                                     {...register('cardNo', { required: 'Card Number is required' })} 
-                                    className='p-2 bg-white text-dark border border-gray-300 rounded-md pl-8 w-full' 
+                                    className='p-2 bg-white text-black border border-gray-300 rounded-md pl-8 w-full' 
                                     placeholder='Enter Card Number'
                                 />
                                 <CiCreditCard1 className='absolute left-2 top-[2.2rem] text-xl'/>
@@ -87,7 +87,7 @@ const CreditCardBill = () => {
                                 <label htmlFor='mobileNo'>Mobile No<sup className='text-error'>*</sup></label>
                                 <input
                                     name='mobileNo'
-                                    className='p-2 pl-7 rounded-md border border-gray-300 text-dark bg-white'
+                                    className='p-2 pl-7 rounded-md border border-gray-300 text-black bg-white'
                                     placeholder='Enter mobile no'
                                     {...register('mobileNo',{required:true})}
                                     type='tel'
@@ -97,7 +97,7 @@ const CreditCardBill = () => {
                             </div>
 
                             <div className='w-full flex flex-row gap-4'>
-                                <button type='submit' className='btn btn-success'>Bill Fetch</button>
+                                <button type='submit' className='btn btn-success text-white'>Bill Fetch</button>
                                 <button type='reset' className='btn btn-outline' onClick={() => reset()}>Cancel</button>
                             </div>
                         </form>

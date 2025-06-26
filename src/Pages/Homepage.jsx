@@ -46,6 +46,7 @@ const serviceData = [
     id: 4,
     heading: "Money Transfer",
     para: "Service",
+    navigate:"/neo-bank/domestic-money-transfer",
     logo: moneyTransLogo
   },
   {
@@ -96,7 +97,7 @@ const Homepage = () => {
         <div className='w-full px-4 flex flex-col justify-center font-normal'>
           <div className='w-full flex flex-row gap-14 px-10 p-5 items-center'>
             {/* CARD 1 */}
-            <div className='w-full p-3 flex flex-col gap-7 text-lightGray rounded-xl bg-gradient-to-tr from-violet-800 to-purple-300'>
+            <div className='w-full p-3 flex flex-col gap-7 text-white rounded-xl bg-gradient-to-tr from-violet-800 to-purple-300'>
               
               <div className='w-full flex flex-row justify-between'>
                 <div className='flex flex-col'>
@@ -116,7 +117,7 @@ const Homepage = () => {
             </div>
 
             {/* CARD 2 */}
-            <div className='w-full flex flex-col gap-7 rounded-xl text-lightGray p-3 bg-gradient-to-tr from-rose-700 to-red-400'>
+            <div className='w-full flex flex-col gap-7 rounded-xl text-white p-3 bg-gradient-to-tr from-rose-700 to-red-400'>
               <div className='flex flex-row justify-between'>
                 <div className='flex flex-col'>
                   <p className='font-semibold text-lg'>Outlet Limit</p>
@@ -137,7 +138,7 @@ const Homepage = () => {
             </div>
 
             {/* CARD 3 */}
-            <div className='w-full h-44 flex justify-center items-center bg-black text-lightGray rounded-xl p-3'>
+            <div className='w-full h-44 flex justify-center items-center bg-black text-white rounded-xl p-3'>
               {/* SWIPER */}
               <Swiper
                 className='w-full h-full flex justify-center items-center'

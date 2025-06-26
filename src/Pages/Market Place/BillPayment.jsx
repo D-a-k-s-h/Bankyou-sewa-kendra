@@ -91,7 +91,7 @@ const BillPayment = () => {
     }
 
   return (
-    <div className='w-full h-full flex flex-col overflow-auto pb-10 bg-lightGray text-dark'>
+    <div className='w-full h-full flex flex-col overflow-auto pb-10 bg-lightGray text-black'>
         <Navbar/>
         <div className='w-full h-full flex flex-col gap-4'>
             <p className='px-5 py-4'>Home / <span className='font-semibold'>Bill Payment</span></p>
@@ -102,7 +102,7 @@ const BillPayment = () => {
                     <div className='w-full flex flex-row gap-5 border border-gray-300 p-3'>
                         {
                             tabData.map((data) => (
-                                <p className={`${tab === data.name ? 'font-semibold border-b-4 border-b-dark' : 'text-gray-400'} cursor-pointer hover:text-gray-700 transition-all duration-100`} key={data.id} onClick={() => {setTab(data.name); reset();}}>{data.name}</p>
+                                <p className={`${tab === data.name ? 'font-semibold border-b-4 border-b-black' : 'text-gray-400'} cursor-pointer hover:text-gray-700 transition-all duration-100`} key={data.id} onClick={() => {setTab(data.name); reset();}}>{data.name}</p>
                             ))
                         }
                     </div>
@@ -121,7 +121,7 @@ const BillPayment = () => {
                                             isClearable
                                             isSearchable
                                             options={operatorOptions}
-                                            className='text-dark rounded-md w-full'
+                                            className='text-black rounded-md w-full'
                                         />
                                     )}
                                 />
@@ -133,7 +133,7 @@ const BillPayment = () => {
                                     type='text' 
                                     id='accountNo' 
                                     {...register('accountNo', { required: 'Account Number is required' })} 
-                                    className='p-2 bg-white text-dark border border-gray-300 rounded-md pl-8 w-full' 
+                                    className='p-2 bg-white text-black border border-gray-300 rounded-md pl-8 w-full' 
                                     placeholder='Enter Account Number'
                                 />
                                 <CiCreditCard1 className='absolute left-2 top-[2.2rem] text-xl'/>
@@ -143,7 +143,7 @@ const BillPayment = () => {
                                 <label htmlFor='mobileNo'>Mobile No<sup className='text-error'>*</sup></label>
                                 <input
                                     name='mobileNo'
-                                    className='p-2 pl-7 rounded-md border border-gray-300 text-dark bg-white'
+                                    className='p-2 pl-7 rounded-md border border-gray-300 text-black bg-white'
                                     placeholder='Enter mobile no'
                                     {...register('mobileNo',{required:true})}
                                     type='tel'
@@ -153,7 +153,7 @@ const BillPayment = () => {
                             </div>
 
                             <div className='w-full flex flex-row gap-4'>
-                                <button type='submit' className='btn btn-success'>Bill Fetch</button>
+                                <button type='submit' className='btn btn-success text-white'>Bill Fetch</button>
                                 <button type='reset' className='btn btn-outline' onClick={() => reset()}>Cancel</button>
                             </div>
                         </form>
