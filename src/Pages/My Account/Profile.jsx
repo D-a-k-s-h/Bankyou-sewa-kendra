@@ -147,7 +147,7 @@ const Profile = () => {
                 </div>
 
                 <div className='w-full h-full flex flex-row gap-2 items-start p-2'>
-                    <div className='w-full flex flex-col gap-1 p-2 border border-custom_pink rounded-md'>
+                    <div className='w-full flex flex-col gap-1 p-2 border border-black rounded-md'>
                         <p className='font-semibold'>Personal Profile Summary</p>
                         <p className='text-sm text-gray-500'>Below is the personal profile summary</p>
                         <div className='w-full flex flex-col gap-2'>
@@ -162,7 +162,7 @@ const Profile = () => {
                         </div>
                     </div>
 
-                    <div className='w-full flex flex-col gap-1 border border-custom_pink rounded-md p-2'>
+                    <div className='w-full flex flex-col gap-1 border border-black rounded-md p-2'>
                         <p className='font-semibold'>Business Details</p>
                         <p className='text-gray-500 text-sm'>Provide your business name,type and registration details</p>
                         <div className='w-full flex flex-col gap-2'>
@@ -177,7 +177,7 @@ const Profile = () => {
                         </div>
                     </div>
 
-                    <div className='w-full flex flex-col gap-1 p-2 border border-custom_pink rounded-md'>
+                    <div className='w-full flex flex-col gap-1 p-2 border border-black rounded-md'>
                         <p className='font-semibold'>Banking Details</p>
                         <p className='text-sm text-gray-500'>Provide your bank account details for transactions</p>
                         <div className='w-full flex flex-col gap-2'>

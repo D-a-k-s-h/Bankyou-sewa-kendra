@@ -25,7 +25,7 @@ const DomesticMoneyTransfer = () => {
         setMobile(data.mobileNo);
         const exists = dmtData.some((dmt) => dmt.mobileNo === data.mobileNo);
         if(exists){
-            toast.error("Account already exists");
+            toast.success("Account already exists");
         }
         setModal(!exists ?? dmtData.empty());
 
@@ -65,7 +65,7 @@ const DomesticMoneyTransfer = () => {
                         </form>
                     </div>
                 </div>
-                <DMTData setModal={setModal} dmtData={dmtData} mobile={mobile}/>
+                {mobile && <DMTData setModal={setModal} dmtData={dmtData} mobile={mobile}/>}
             </div>
         </div>
         {modal && <AddAccount setModal={setModal} mobile={mobile}/>}

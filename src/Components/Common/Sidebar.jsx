@@ -13,7 +13,7 @@ const SmoothDetails = ({ summary, children, open, toggle }) => {
   return (
     <div className="w-full my-1 rounded font-michroma">
       <button
-        className="w-full text-left py-2 rounded focus:outline-none flex justify-between items-center hover:text-error"
+        className="w-full text-left py-2 rounded focus:outline-none flex justify-between items-center"
         onClick={toggle}
       >
         {summary}
@@ -90,7 +90,7 @@ const Sidebar = () => {
                     summary={
                       <div className={`${matchParentRoute(sidebarLink?.path) ? 'bg-gradient-to-r from-neutral-900 to-pink-700 rounded-r-full py-2 text-white w-full' : ''} pl-2 flex flex-row items-center gap-2`} onClick={() => {!sidebarLink?.expansion && navigate(`${sidebarLink?.path}`)}}>
                         {Icon && <Icon className='text-lg' />}
-                        {sidebarLink?.name}
+                        <p className={`${matchParentRoute(sidebarLink?.path) ? 'text-white' : 'bg-gradient-to-r from-neutral-900 to-pink-600 bg-clip-text text-transparent hover:text-black'}`}>{sidebarLink?.name}</p>
                         {sidebarLink?.expansion && <FaLongArrowAltRight className={`text-sm transition-all duration-300 ${isOpen ? 'rotate-90' : ''}`} />}
                       </div>
                     }
@@ -102,9 +102,9 @@ const Sidebar = () => {
                         sidebarLink?.expansion.map((expansionLink) => {
                           const Icon = Icons[expansionLink?.icon];
                           return (
-                            <NavLink to={expansionLink?.path} key={expansionLink?.id} className='flex flex-row text-sm pb-2 items-center gap-2 pl-5 hover:text-error transition-all duration-200'>
-                              {Icon && <Icon className={`text-lg ${matchRoute(expansionLink?.path) ? 'text-error' : ''}`} />}
-                              <p className={`${matchRoute(expansionLink?.path) ? 'text-error' : ''}`}>{expansionLink?.name}</p>
+                            <NavLink to={expansionLink?.path} key={expansionLink?.id} className={`${matchRoute(expansionLink?.path) ? 'bg-gradient-to-r from-neutral-900 to-pink-700 rounded-full' : ''} flex flex-row text-sm py-2 items-center gap-2 pl-5`}>
+                              {Icon && <Icon className={`text-lg ${matchRoute(expansionLink?.path) ? 'text-white' : ''}`} />}
+                              <p className={`${matchRoute(expansionLink?.path) ? 'text-white' : 'bg-gradient-to-r from-neutral-900 to-pink-600 bg-clip-text text-transparent hover:text-black transition-all duration-100'}`}>{expansionLink?.name}</p>
                             </NavLink>
                           );
                         })

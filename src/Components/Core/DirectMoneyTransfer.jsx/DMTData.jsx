@@ -13,7 +13,7 @@ const DMTData = ({dmtData,mobile,setModal}) => {
                   dmtData
                   .filter(item => item.mobileNo === mobile)
                   .map((item,index) => (
-                    <div key={index} className='w-full flex rounded-md bg-[#F6F5F5] shadow-black shadow-sm p-4 flex-col gap-2'>
+                    <div key={index} className='w-full flex rounded-md font-semibold bg-[#F6F5F5] shadow-black shadow-sm p-4 flex-col gap-2'>
                       <p>Bank Holder: {item?.bankHolder}</p>
                       <p>IFSC Code: {item?.ifscCode}</p>
                       <p>MobileNo: {item?.mobileNo}</p>
