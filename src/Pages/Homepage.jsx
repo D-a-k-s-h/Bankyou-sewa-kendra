@@ -95,7 +95,7 @@ const Homepage = () => {
     <div className='w-full h-full pb-10 bg-lightGray overflow-auto'>
         <Navbar/>
         <div className='w-full px-4 flex flex-col justify-center font-normal'>
-          <div className='w-full flex flex-row gap-14 px-10 p-5 items-center'>
+          <div className='w-full flex flex-col lg:flex-row gap-4 md:gap-7 lg:gap-14 py-3 md:px-7 lg:px-10 md:py-5 items-center'>
             {/* CARD 1 */}
             <div className='w-full p-3 flex flex-col gap-7 text-white rounded-xl bg-gradient-to-tr from-violet-800 to-purple-300'>
               
@@ -157,14 +157,14 @@ const Homepage = () => {
           </div>
 
           {/* SERVICES */}
-          <div className='w-full flex flex-row gap-5 items-start'>
+          <div className='w-full flex flex-col lg:flex-row gap-5 items-start'>
             <div className='w-full border border-gray-300'>
               <p className='border-b p-2 border-b-gray-300 font-semibold'>Quick Services</p>
-              <div className='grid grid-cols-3 grid-rows-3 gap-5 p-3'>
+              <div className='grid grid-cols-3 grid-rows-3 gap-3 md:gap-5 p-3'>
                 {
                   serviceData.map((data) => (
-                    <div key={data.id} onClick={() => navigate(data.navigate)} className='w-full h-full flex btn btn-outline flex-row gap-2 border border-gray-300 p-2'>
-                      <img src={data.logo} alt='logos' className='w-10 rounded-md aspect-square object-cover'/>
+                    <div key={data.id} onClick={() => navigate(data.navigate)} className='w-full h-full flex btn btn-outline flex-row gap-1 md:gap-2 border border-gray-300 p-2'>
+                      <img src={data.logo} alt='logos' className='w-full md:w-24 lg:w-10 rounded-md aspect-square object-cover'/>
                       <div className='flex flex-col'>
                         <p className='text-sm'>{data.heading}</p>
                         <p className='text-lg'>{data.para}</p>

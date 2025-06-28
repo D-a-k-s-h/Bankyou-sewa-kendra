@@ -44,7 +44,7 @@ const AddAccount = ({setModal,mobile}) => {
 
   return (
     <div className='fixed w-screen inset-0 z-[1000] font-michroma !mt-0 grid place-items-center overflow-auto bg-white bg-opacity-10 backdrop-blur-sm'>
-        <div className='w-1/2 mx-auto flex flex-col text-lg gap-4 py-5 px-5 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] bg-custom_pink text-black'>
+        <div className='w-10/12 md:w-1/2 mx-auto flex flex-col text-lg gap-4 py-5 px-5 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] bg-custom_pink text-black'>
             <div>
                 {
                     addDetails === "Sender" ? (
@@ -182,7 +182,7 @@ const AddAccount = ({setModal,mobile}) => {
                                 />
                             </div>
 
-                            <div className='w-full flex flex-row gap-4'>
+                            <div className='w-full flex flex-row flex-wrap gap-4'>
                                 <button type='submit' className='btn btn-success text-white'>Add Account</button>
                                 <button type='reset' className='btn btn-outline'>Cancel</button>
                                 <button type='button' onClick={() => setAddDetails("Sender")} className='btn btn-outline flex flex-row items-center'><IoIosArrowBack/>Back</button>

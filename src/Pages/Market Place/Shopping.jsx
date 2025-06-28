@@ -80,10 +80,10 @@ const Shopping = () => {
             <p className='px-4 pt-4'>Home / <span className='font-semibold'>Products</span></p>
 
             {/* CONTENT */}
-            <div className='w-full h-full grid grid-cols-1 md:grid-cols-3 gap-4'>
+            <div className='w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
                     shoppingData.map((item) => (
-                        <div key={item.id} className='w-full h-full bg-white rounded-lg shadow-sm shadow-black p-4 flex flex-col gap-2'>
+                        <div key={item.id} className='w-full h-full bg-white rounded-lg shadow-sm shadow-black p-4 flex flex-col md:justify-between gap-2'>
                             <div className='w-full flex flex-row justify-between items-center'>
                                 <p>{item.name}</p>
                                 <p className={`${item.status === 'In Stock' ? 'rounded-md bg-success p-1 text-xs ' : ' rounded-md bg-error text-xs p-1'} text-white`}>{item.status}</p>
@@ -100,13 +100,13 @@ const Shopping = () => {
                                 </div>
                                 <div className='flex flex-row justify-between items-center'>
                                     <p>{item?.warranty ? 'Warranty' : 'Connectivity'}</p>
-                                    <p>{item?.warranty ? item.warranty : item.connectivity}</p>
+                                    <p className='text-xs lg:text-base'>{item?.warranty ? item.warranty : item.connectivity}</p>
                                 </div>
                                 <div className='flex flex-row justify-between items-center'>
                                     <p>{item?.compatibility ? 'Compatibility' : 'Delivery'}</p>
-                                    <p>{item?.compatibility ? item.compatibility : item.delivery}</p>
+                                    <p className='text-xs lg:text-base'>{item?.compatibility ? item.compatibility : item.delivery}</p>
                                 </div>
-                                <p className='text-sm py-2 text-gray-600'>{item.description}</p>
+                                <p className='text-sm md:text-center py-2 text-gray-600'>{item.description}</p>
                                 <button type='button' className='w-full btn btn-primary'>Buy Now</button>
                             </div>
                         </div>

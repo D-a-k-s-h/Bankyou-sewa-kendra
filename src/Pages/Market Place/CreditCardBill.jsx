@@ -45,7 +45,7 @@ const CreditCardBill = () => {
             <p className='px-5 py-4'>Home / <span className='font-semibold'>Bill Payment</span></p>
 
             {/* CONTENT */}
-            <div className='w-full flex flex-row gap-5 items-start p-4'>
+            <div className='w-full flex flex-col lg:flex-row gap-5 items-start p-4'>
                 <div className='w-full flex flex-col gap-4'> 
                     <div className='w-full flex flex-row gap-5 border border-gray-300 p-3'>
                         <p className={`font-semibold border-b-4 border-b-black cursor-pointer`}>Credit Card Bill</p>    

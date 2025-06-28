@@ -56,7 +56,7 @@ const Sidebar = () => {
   return (
     <>
       <button
-        className="md:hidden fixed top-4 right-4 z-50 bg-green-300 p-2 rounded shadow"
+        className="md:hidden fixed top-4 right-4 z-50 bg-gradient-to-r from-neutral-900 to-pink-600 p-2 rounded shadow"
         onClick={() => setSidebarOpen(!sidebarOpen)}
         aria-label="Open sidebar"
       >

@@ -34,7 +34,7 @@ const MiniWebsite = () => {
 
                 <form onSubmit={handleSubmit(submitHandler)} className='w-full flex flex-col gap-4'>
                     {/* BASIC INFORMATION */}
-                    <div className='w-full flex flex-row items-center gap-10'>
+                    <div className='w-full flex flex-col md:flex-row items-center gap-5 md:gap-10'>
                         <div className='w-full flex flex-col relative'>
                             <label htmlFor='companyName'>Company Name<sup className='text-error'>*</sup></label>
                             <input 
@@ -61,7 +61,7 @@ const MiniWebsite = () => {
                         </div>
                     </div>
 
-                    <div className='w-full flex flex-row items-center gap-10'>
+                    <div className='w-full flex flex-col md:flex-row items-center gap-5 md:gap-10'>
                         <div className='w-full flex flex-col relative'>
                             <label htmlFor='companyEmail'>Company Email Address<sup className='text-error'>*</sup></label>
                             <input 
@@ -88,7 +88,7 @@ const MiniWebsite = () => {
                         </div>
                     </div>
 
-                    <div className='w-full flex flex-row items-center gap-10'>
+                    <div className='w-full flex flex-col md:flex-row items-center gap-5 md:gap-10'>
                         <div className='w-full flex flex-col'>
                             <label htmlFor='companyImage'>Company Image</label>
                             <input 
@@ -114,7 +114,7 @@ const MiniWebsite = () => {
                     
                     {/* SOCIAL MEDIA LINKS */}
                     <p className='font-semibold'>Social Media Links</p>
-                    <div className='w-full flex flex-row items-center gap-10'>
+                    <div className='w-full flex flex-col md:flex-row items-center gap-5 md:gap-10'>
                         <div className='w-full flex flex-col relative'>
                             <label htmlFor='companyFacebook'>Facebook Link</label>
                             <input 
@@ -140,7 +140,7 @@ const MiniWebsite = () => {
                         </div>
                     </div>
 
-                    <div className='w-full flex flex-row items-center gap-10'>
+                    <div className='w-full flex flex-col md:flex-row items-center gap-5 md:gap-10'>
                         <div className='w-full flex flex-col relative'>
                             <label htmlFor='companyTwitter'>Twitter Link</label>
                             <input 
@@ -167,7 +167,7 @@ const MiniWebsite = () => {
                     </div>
 
                     {/* GALLERY IMAGES */}
-                    <div className='w-full flex flex-row items-center gap-10'>
+                    <div className='w-full flex flex-col md:flex-row items-center gap-5 md:gap-10'>
                         <div className='w-full flex flex-col'>
                             <label htmlFor='companyGallery' className='font-semibold'>Gallery Images <span className='font-normal'>(can choose multiple)</span></label>
                             <input 

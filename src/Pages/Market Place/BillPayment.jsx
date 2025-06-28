@@ -97,9 +97,9 @@ const BillPayment = () => {
             <p className='px-5 py-4'>Home / <span className='font-semibold'>Bill Payment</span></p>
             
             {/* CONTENT */}
-            <div className='w-full flex flex-row gap-5 items-start p-4'>
+            <div className='w-full flex flex-col lg:flex-row gap-5 items-start p-4'>
                 <div className='w-full flex flex-col gap-4'> 
-                    <div className='w-full flex flex-row gap-5 border border-gray-300 p-3'>
+                    <div className='w-full flex flex-wrap flex-row gap-5 border border-gray-300 p-3'>
                         {
                             tabData.map((data) => (
                                 <p className={`${tab === data.name ? 'font-semibold border-b-4 border-b-black' : 'text-gray-400'} cursor-pointer hover:text-gray-700 transition-all duration-100`} key={data.id} onClick={() => {setTab(data.name); reset();}}>{data.name}</p>

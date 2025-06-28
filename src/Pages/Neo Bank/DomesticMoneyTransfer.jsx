@@ -39,7 +39,7 @@ const DomesticMoneyTransfer = () => {
             <p className='px-5 py-4'>Home / neo bank / <span className='font-semibold'>Domestic Money Transfer</span></p>
 
             {/* CONTENT */}
-            <div className='w-full flex p-4 flex-row gap-5 items-start'>
+            <div className='w-full flex p-4 flex-col lg:flex-row gap-5 lg:gap-2 items-start'>
                 <div className='w-full flex flex-col'>
                     <div className='border border-gray-300 p-2'>
                         <p className='w-fit font-semibold border-b-4 border-b-black'>Domestic Money Transfer</p>

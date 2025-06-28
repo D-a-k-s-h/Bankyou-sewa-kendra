@@ -54,7 +54,7 @@ const MobileRecharge = () => {
             <p className='px-5 py-4'>Home / <span className='font-semibold'>Recharge</span></p>
 
             {/* CONTENT */}
-            <div className='w-full flex p-4 flex-row gap-5 items-start'>
+            <div className='w-full flex p-4 flex-col lg:flex-row gap-5 items-start'>
                 <div className='w-full flex flex-col'>
                     <div className='flex flex-row gap-5 border border-gray-300 p-3'>
                         <p onClick={() => setTab("Mobile Recharge")} className={`${tab === 'Mobile Recharge' ? 'font-semibold border-b-4 border-b-black' : 'text-gray-400'} cursor-pointer hover:text-gray-700`}>Mobile Recharge</p>

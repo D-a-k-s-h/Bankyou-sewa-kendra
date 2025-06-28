@@ -25,12 +25,12 @@ const BillFetch = ({billDetails,setBillDetails,setRechargeSummary}) => {
 
   return (
     <div className='fixed w-screen inset-0 z-[1000] !mt-0 grid place-items-center overflow-auto bg-white bg-opacity-10 backdrop-blur-sm'>
-        <div className='w-1/2 mx-auto flex flex-col text-lg gap-4 py-5 px-10 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] bg-custom_pink text-black'>
+        <div className='w-full md:w-10/12 lg:w-1/2 mx-auto flex flex-col text-lg gap-4 py-5 px-4 md:px-10 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] bg-custom_pink text-black'>
             <div className='w-full flex flex-row items-center justify-between'>
                 <p className='font-semibold text-green-500'>Bill Fetched Successfully</p>
                 <button type='button' className='text-black' onClick={() => setBillDetails(null)}><RxCross1/></button>
             </div>
-            <div className='w-full px-5 py-3'>
+            <div className='w-full px-1.5 md:px-5 py-3'>
                 <p className='w-full text-center border border-black p-2 uppercase font-semibold'>Bill Summary</p>
                 <div id='print-section' className='flex flex-col gap-4 border border-black p-5'>
                     <div className='flex flex-row justify-between'>
