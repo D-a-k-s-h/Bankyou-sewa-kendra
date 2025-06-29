@@ -3,6 +3,14 @@ import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import BankYouLogo from '../Assets/Bank you logo.png';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import "swiper/css"
+import "swiper/css/free-mode"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+import {Autoplay} from 'swiper/modules'
+import Slide1 from '../Assets/Slider Images/login page slide 1.png';
+import Slide2 from '../Assets/Slider Images/login page slide 2.png';
 
 const Signup = () => {
 
@@ -25,22 +33,37 @@ const Signup = () => {
 
   return (
     <div className='w-[100vw] h-[100vh] font-michroma font-normal bg-gray-500 flex justify-center items-center bg-cover bg-center bg-no-repeat' style={{ backgroundImage: 'url("/background.jpg")' }}>
-        <div className='w-1/2 bg-white rounded-md flex flex-col justify-center'>
+        <div className='w-full md:w-1/2 bg-white rounded-md flex flex-col justify-center'>
             <div className='flex flex-row justify-evenly items-center p-1'>
                 <img src={BankYouLogo} alt='companyLogo' className='object-cover w-44'/>
             </div>
-            <div className='flex flex-row items-center'>
+            <div className='w-full flex flex-row'>
                 {/* IMAGE SLIDER */}
-                <div></div>
-                {/* LOGIN FORM */}
-                <form className='flex flex-col gap-5 bg-black text-white p-4 rounded-br-md' onSubmit={handleSubmit(submitHandler)}>
-                    <div className='flex flex-col gap-4'>
+                <div className='w-[50%] hidden md:block'>
+                    {/* SWIPER */}
+                    <Swiper
+                        className='w-full h-full'
+                        loop={true}
+                        slidesPerView={1}
+                        autoplay={{delay:4000, disableOnInteraction:false}}
+                        modules={[Autoplay]}
+                    >
+                        <SwiperSlide className='w-full h-full'>
+                            <img src={Slide1} alt='Welcome slide 1' className='w-full h-full object-fill'/>
+                        </SwiperSlide>
+                        <SwiperSlide className='w-full h-full'>
+                            <img src={Slide2} alt='Welcome slide 2' className='w-full h-full object-fill'/>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
+                {/* SIGNUP FORM */}
+                <form className='w-[50%] flex flex-col gap-5 bg-black text-white p-4 rounded-br-md' onSubmit={handleSubmit(submitHandler)}>
+                    <div className='w-full flex flex-col gap-4'>
                         <p className='text-2xl font-semibold'>Create a new account</p>
-                        
                     </div>
 
-                    <div className='flex flex-col gap-3'>
-                        <div className='flex flex-col gap-1'>
+                    <div className='w-full flex flex-col gap-3'>
+                        <div className='w-full flex flex-col gap-1'>
                             <label htmlFor='mobileNo'>Mobile no linked with aadhar card<sup className='text-red-500'>*</sup></label>
                             <input
                                 name='mobileNo'
@@ -52,7 +75,7 @@ const Signup = () => {
                             />
                         </div>
 
-                        <div className='flex flex-col gap-1'>
+                        <div className='w-full flex flex-col gap-1'>
                             <label htmlFor=''>Pan no<sup className='text-red-500'>*</sup></label>
                             <input
                                 className='custom-input text-black'
@@ -64,8 +87,8 @@ const Signup = () => {
                             />
                         </div>
 
-                        <div className='flex flex-row gap-2'>
-                            <div className='relative flex flex-col gap-1'>
+                        <div className='w-full flex flex-col md:flex-row gap-2'>
+                            <div className='w-full relative flex flex-col gap-1'>
                                 <label htmlFor='password'>Create Password<sup className='text-red-500'>*</sup></label>
                                 <input
                                     required
@@ -73,18 +96,18 @@ const Signup = () => {
                                     type={`${isVisiblePassword ? 'text' : 'password'}`}
                                     {...register("password",{required:true})}
                                     placeholder='Create password'
-                                    className='custom-input text-black'
+                                    className='w-full custom-input text-black'
                                 />
                                 <FaEye className={`${isVisiblePassword ? 'absolute top-10 right-3 cursor-pointer text-black' : 'hidden'}`} onClick={() => {setIsVisiblePassword(!isVisiblePassword)}}/>
                                 <FaEyeSlash onClick={() => {setIsVisiblePassword(!isVisiblePassword)}} className={`${isVisiblePassword ? 'hidden' : 'absolute right-3 top-10 cursor-pointer text-black'}`}/>
                             </div>
-                            <div className='relative flex flex-col gap-1'>
+                            <div className='w-full relative flex flex-col gap-1'>
                                 <label htmlFor='confirmPassword'>Confirm Password<sup className='text-red-500'>*</sup></label>
                                 <input
                                     name='confirmPassword'
                                     type={`${isVisibleConfirmPassword ? 'text' : 'password'}`}
                                     required
-                                    className='custom-input text-black'
+                                    className='w-full custom-input text-black'
                                     placeholder='Confirm password'
                                     {...register('confirmPassword',{required:true})}
                                 />
