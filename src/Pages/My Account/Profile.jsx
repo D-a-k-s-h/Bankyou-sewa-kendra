@@ -118,27 +118,27 @@ const Profile = () => {
             <div className='w-full border border-gray-500 rounded-md flex flex-col gap-1'>
                 <p className='font-semibold text-lg px-6 pt-2'>My Profile</p>
                 
-                <div className='w-full flex flex-row gap-10 items-center border-b border-b-gray-500 p-4'>
-                    <img src='https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_1280.png' alt='profileImage' className='object-cover aspect-square rounded-md w-48'/>
+                <div className='w-full flex flex-col md:flex-row gap-10 items-center border-b border-b-gray-500 p-4'>
+                    <img src='https://cdn.pixabay.com/photo/2019/08/11/18/59/icon-4399701_1280.png' alt='profileImage' className='object-cover aspect-square rounded-md w-44 md:w-48'/>
                     <div className='w-full flex flex-col gap-3'>
                         <div className='w-full flex flex-col'>
                             <p className='text-xl font-semibold'>CHANDAN THAKUR</p>
                             <p className='text-sm'>chandan@softbrainit.Net</p>
                         </div>
-                        <div className='w-full flex flex-row gap-4'>
-                            <div className='w-full flex flex-col'>
+                        <div className='w-full flex flex-col md:flex-row gap-4'>
+                            <div className='w-full flex flex-row md:flex-col items-center md:items-start justify-between'>
                                 <p className='text-sm text-gray-600'>Date of Birth</p>
                                 <p className='text-xl font-semibold'>05-01-1995</p>
                             </div>
-                            <div className='w-full flex flex-col'>
+                            <div className='w-full flex flex-row md:flex-col items-center md:items-start justify-between'>
                                 <p className='text-sm text-gray-600'>Father's Name</p>
                                 <p className='text-xl font-semibold'>TEST</p>
                             </div>
-                            <div className='w-full flex flex-col'>
+                            <div className='w-full flex flex-row md:flex-col items-center md:items-start justify-between'>
                                 <p className='text-sm text-gray-600'>Mother's Name</p>
                                 <p className='text-xl font-semibold'>TEST</p>
                             </div>
-                            <div className='w-full flex flex-col'>
+                            <div className='w-full flex flex-row md:flex-col items-center md:items-start justify-between'>
                                 <p className='text-sm text-gray-600'>Gender</p>
                                 <p className='text-xl font-semibold'>Male</p>
                             </div>
@@ -146,7 +146,7 @@ const Profile = () => {
                     </div>
                 </div>
 
-                <div className='w-full h-full flex flex-row gap-2 items-start p-2'>
+                <div className='w-full h-full flex flex-col md:flex-row gap-2 items-start p-2'>
                     <div className='w-full flex flex-col gap-1 p-2 border border-black rounded-md'>
                         <p className='font-semibold'>Personal Profile Summary</p>
                         <p className='text-sm text-gray-500'>Below is the personal profile summary</p>

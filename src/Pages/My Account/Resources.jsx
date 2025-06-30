@@ -41,7 +41,7 @@ const Resources = () => {
       <Navbar/>
       <div className='w-full h-full flex flex-col gap-4'>
         <p className='px-5 pt-4'>Home / <span className='font-semibold'>Resources</span></p>
-        <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-4 p-4'>
+        <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4'>
           {
             resourcesData.map((resource) => (
               <div key={resource.id} className='w-full bg-white rounded-lg p-4 shadow-lg flex flex-col gap-5'>

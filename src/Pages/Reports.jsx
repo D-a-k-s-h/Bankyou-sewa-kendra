@@ -46,7 +46,7 @@ const Reports = () => {
             {/* CONTENT */}
             <div className='w-full p-4 flex flex-col gap-10'>
                 <form onSubmit={handleSubmit(submitHandler)} className='w-full flex flex-col gap-5'>
-                    <div className='w-full flex flex-row gap-5 items-center'>
+                    <div className='w-full flex flex-col md:flex-row gap-5 items-center'>
                         <div className='w-full flex flex-col'>
                             <label htmlFor='fromDate'>From Date</label>
                             <input 
@@ -95,7 +95,7 @@ const Reports = () => {
                 </form>
 
                 <div className='relative w-full h-full overflow-x-auto'>
-                    <div className='w-[1200px] mx-auto'>
+                    <div className='md:w-[1200px] mx-auto'>
                         <MUIDataTable
                             title={"Transaction Reports"}
                             columns={columns}
