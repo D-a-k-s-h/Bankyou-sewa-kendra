@@ -18,7 +18,86 @@ const Reports = () => {
         reset();
     }
 
-    const columns = ["USER NAME","ACCOUNT NUMBER","IFSC CODE","AMOUNT","SURCHARGE","COMMISSION","TOTAL COST","NEW BALANCE","STATUS","SERVICE NAME","OPERATOR NAME"];
+    const columns = [
+        {
+            name: "USER NAME",
+            options: {
+            setCellProps: () => ({ style: { textAlign: "center" } }),
+            setCellHeaderProps: () => ({ style: { textAlign: "center" } }),
+            },
+        },
+        {
+            name: "ACCOUNT NUMBER",
+            options: {
+            setCellProps: () => ({ style: { textAlign: "center" } }),
+            setCellHeaderProps: () => ({ style: { textAlign: "center" } }),
+            },
+        },
+        {
+            name: "IFSC CODE",
+            options: {
+            setCellProps: () => ({ style: { textAlign: "center" } }),
+            setCellHeaderProps: () => ({ style: { textAlign: "center" } }),
+            },
+        },
+        {
+            name: "AMOUNT",
+            options: {
+            setCellProps: () => ({ style: { textAlign: "center" } }),
+            setCellHeaderProps: () => ({ style: { textAlign: "center" } }),
+            },
+        },
+        {
+            name: "SURCHARGE",
+            options: {
+            setCellProps: () => ({ style: { textAlign: "center" } }),
+            setCellHeaderProps: () => ({ style: { textAlign: "center" } }),
+            },
+        },
+        {
+            name: "COMMISSION",
+            options: {
+            setCellProps: () => ({ style: { textAlign: "center" } }),
+            setCellHeaderProps: () => ({ style: { textAlign: "center" } }),
+            },
+        },
+        {
+            name: "TOTAL COST",
+            options: {
+            setCellProps: () => ({ style: { textAlign: "center" } }),
+            setCellHeaderProps: () => ({ style: { textAlign: "center" } }),
+            },
+        },
+        {
+            name: "NEW BALANCE",
+            options: {
+            setCellProps: () => ({ style: { textAlign: "center" } }),
+            setCellHeaderProps: () => ({ style: { textAlign: "center" } }),
+            },
+        },
+        {
+            name: "STATUS",
+            options: {
+            setCellProps: () => ({ style: { textAlign: "center" } }),
+            setCellHeaderProps: () => ({ style: { textAlign: "center" } }),
+            },
+        },
+        {
+            name: "SERVICE NAME",
+            options: {
+            setCellProps: () => ({ style: { textAlign: "center" } }),
+            setCellHeaderProps: () => ({ style: { textAlign: "center" } }),
+            },
+        },
+        {
+            name: "OPERATOR NAME",
+            options: {
+            setCellProps: () => ({ style: { textAlign: "center" } }),
+            setCellHeaderProps: () => ({ style: { textAlign: "center" } }),
+            },
+        },
+    ];
+
     
     const dummyData = [
         ["John Doe", "1234567890", "IFSC0001", "500", "10", "5", "515", "1000", "Success", "Electricity Bill", "State Power"],

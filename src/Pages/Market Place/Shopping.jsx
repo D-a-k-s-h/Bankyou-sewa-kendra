@@ -106,7 +106,7 @@ const Shopping = () => {
                                     <p>{item?.compatibility ? 'Compatibility' : 'Delivery'}</p>
                                     <p className='text-xs lg:text-base'>{item?.compatibility ? item.compatibility : item.delivery}</p>
                                 </div>
-                                <p className='text-sm md:text-center py-2 text-gray-600'>{item.description}</p>
+                                <p className='text-sm md:text-center lg:text-left py-2 text-gray-600'>{item.description}</p>
                                 <button type='button' className='w-full btn btn-primary'>Buy Now</button>
                             </div>
                         </div>
