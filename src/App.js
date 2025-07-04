@@ -16,6 +16,7 @@ import Resources from "./Pages/My Account/Resources";
 import Reports from "./Pages/Reports";
 import Profile from "./Pages/My Account/Profile";
 import DomesticMoneyTransfer from "./Pages/Neo Bank/DomesticMoneyTransfer";
+import AEPSService from "./Pages/Neo Bank/AEPSService";
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
           <Route path="/reports" element={<Reports/>}/>
           <Route path="/my-account/profile" element={<Profile/>}/>
           <Route path="/neo-bank/domestic-money-transfer" element={<DomesticMoneyTransfer/>}/>
+          <Route path="/neo-bank/aeps-services" element={<AEPSService/>}/>
           <Route path="*" element={<ErrorPage/>}/>
         </Route>
       </Routes>
