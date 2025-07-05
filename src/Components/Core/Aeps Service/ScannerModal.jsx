@@ -38,7 +38,7 @@ const ScannerModal = ({setScannerModal,billData,setAepsModalData}) => {
                         </div>
                     ) : (
                         <div className='w-full flex flex-col gap-3 justify-center items-center'>
-                            <p>Device Status: <span className='text-success'>connected</span></p>
+                            <p>Device Status: <span className='text-success'>Connected</span></p>
                             <button className='btn btn-success text-white' onClick={handleScanning}>Capture Fingerprints</button>
                         </div>
                     )

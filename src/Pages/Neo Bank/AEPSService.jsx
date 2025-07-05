@@ -4,7 +4,6 @@ import RecentTransactions from '../../Components/Common/RecentTransactions'
 import { Controller, set, useForm } from 'react-hook-form'
 import Select from 'react-select'
 import ScannerModal from '../../Components/Core/Aeps Service/ScannerModal'
-import RechargeSummary from '../../Components/Common/RechargeSummary'
 import AepsModal from '../../Components/Core/Aeps Service/AepsModal'
 
 const AEPSService = () => {
@@ -47,7 +46,7 @@ const AEPSService = () => {
     <div className='w-full h-full pb-10 overflow-auto text-black bg-lightGray'>
         <Navbar/>
         <div className='w-full h-full flex flex-col gap-4'>
-            <p className='px-5 py-4'>Home / neo bank / <span className='font-semibold'>Domestic Money Transfer</span></p>
+            <p className='px-5 py-4'>Home / neo bank / <span className='font-semibold'>AEPS Service</span></p>
 
             {/* CONTENT */}
             <div className='w-full flex p-4 flex-col lg:flex-row gap-5 lg:gap-2 items-start'>
