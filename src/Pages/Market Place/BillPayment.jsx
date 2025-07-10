@@ -148,6 +148,8 @@ const BillPayment = () => {
                                     {...register('mobileNo',{required:true})}
                                     type='tel'
                                     required
+                                    maxLength={10}
+                                    minLength={10}
                                 />
                                 <CiMobile3 className='absolute top-[2.35rem] left-2'/>
                             </div>

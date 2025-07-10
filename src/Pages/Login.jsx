@@ -27,6 +27,8 @@ const Login = () => {
     const submitHandler = async(data) => {
         console.log("LOGIN DATA -> ",data);
 
+        navigate('/');
+
         reset();
     }
 
@@ -71,6 +73,8 @@ const Login = () => {
                                 placeholder='Enter mobile no'
                                 required
                                 {...register('mobileNo',{required:true})}
+                                minLength={10}
+                                maxLength={10}
                             />
                         </div>
                         <div className='relative flex flex-col gap-1'>

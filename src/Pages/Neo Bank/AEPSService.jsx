@@ -63,7 +63,9 @@ const AEPSService = () => {
                                 className='p-2 text-black border border-gray-400 rounded-md'
                                 {...register("aadharNo",{required:"Aadhaar no is required"})}
                                 required
-                                type='number'
+                                type='tel'
+                                maxLength={12}
+                                minLength={12}
                             />
                         </div>
 
@@ -95,6 +97,8 @@ const AEPSService = () => {
                                 className='p-2 text-black border border-gray-400 rounded-md'
                                 {...register("mobileNo",{required:"Mobile no is required"})}
                                 required
+                                maxLength={10}
+                                minLength={10}
                             />
                         </div>
 
@@ -132,6 +136,8 @@ const AEPSService = () => {
                                         {...register("amount",{required:'Amount is required'})}
                                         required
                                         className='p-2 border border-gray-400 rounded-md'
+                                        min={100}
+                                        max={50000}
                                     />
                                 </div>
                             )

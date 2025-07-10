@@ -15,7 +15,7 @@ const PlanModal = ({planModal, setPlanModal,selectedPlan,setSelectedPlan}) => {
     <>
       {planModal.operatorName && (
         <div className='fixed w-screen inset-0 z-[1000] !mt-0 grid place-items-center overflow-auto bg-white bg-opacity-10 backdrop-blur-sm'>
-          <div className='w-full mx-auto flex flex-col text-lg gap-4 py-5 px-5 lg:px-10 pb-12 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] bg-custom_pink text-black'>
+          <div className='w-full md:w-9/12 mx-auto flex flex-col text-lg gap-4 py-5 px-5 lg:px-10 pb-12 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] bg-custom_pink text-black'>
             <p className='font-semibold'>{planModal.operatorName}</p>
             <div className='w-full'>
               <Table className='w-full border border-black rounded-md'>

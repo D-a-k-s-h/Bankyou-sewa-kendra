@@ -80,10 +80,12 @@ const AddAccount = ({setModal,mobile}) => {
                                 <input
                                     className='w-full p-2 border border-black rounded-md'
                                     placeholder='Enter aadhar number'
-                                    type='number'
+                                    type='tel'
                                     {...register("aadharNo",{required:"Aadhar number is required"})}
                                     required
                                     name='aadharNo'
+                                    maxLength={12}
+                                    minLength={12}
                                 />
                             </div>
                             <div className='w-full flex flex-col'>
@@ -155,6 +157,8 @@ const AddAccount = ({setModal,mobile}) => {
                                     readOnly
                                     name='mobileNo'
                                     value={mobile}
+                                    minLength={10}
+                                    maxLength={10}
                                 />
                             </div>
                             <div className='w-full flex flex-col'>

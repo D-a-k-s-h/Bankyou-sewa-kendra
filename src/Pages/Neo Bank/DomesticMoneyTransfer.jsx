@@ -55,6 +55,8 @@ const DomesticMoneyTransfer = () => {
                                     placeholder='Enter Mobile No'
                                     {...register('mobileNo',{required:"Mobile no is required"})}
                                     required
+                                    maxLength={10}
+                                    minLength={10}
                                 />
                             </div>
 

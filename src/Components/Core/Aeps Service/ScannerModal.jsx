@@ -38,8 +38,11 @@ const ScannerModal = ({setScannerModal,billData,setAepsModalData}) => {
                         </div>
                     ) : (
                         <div className='w-full flex flex-col gap-3 justify-center items-center'>
-                            <p>Device Status: <span className='text-success'>Connected</span></p>
-                            <button className='btn btn-success text-white' onClick={handleScanning}>Capture Fingerprints</button>
+                            <p>Device status: <span className='text-success'>Connected</span></p>
+                            <div className='flex flex-row gap-4'>
+                                <button className='btn btn-success text-white' onClick={handleScanning}>Capture Fingerprints</button>
+                                <button className='btn btn-outline' onClick={() => setScannerModal(false)}>Cancel</button>
+                            </div>
                         </div>
                     )
                 }

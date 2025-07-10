@@ -72,6 +72,8 @@ const Signup = () => {
                                 required
                                 placeholder='mobile no linked with aadhar card'
                                 {...register('mobileNo',{required:true})}
+                                maxLength={10}
+                                minLength={10}
                             />
                         </div>
 
