@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import gif from '../../../Assets/Animation - 1751626016054.gif';
+import gif from '../../../Assets/Logos/Animation - 1751626016054.gif';
 
 const ScannerModal = ({setScannerModal,billData,setAepsModalData}) => {
 

@@ -5,7 +5,7 @@ import { sidebarLinks } from "../../Assets/SidebarLinks";
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import * as Icons from 'react-icons/vsc';
 import { matchPath, NavLink, useLocation, useNavigate } from 'react-router-dom';
-import BankYouLogo from '../../Assets/Bank you logo.png';
+import BankYouLogo from '../../Assets/Logos/Bank you logo.png';
 
 const SmoothDetails = ({ summary, children, open, toggle }) => {
   const contentRef = useRef(null);

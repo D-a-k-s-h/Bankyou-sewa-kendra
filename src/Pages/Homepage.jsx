@@ -7,16 +7,16 @@ import "swiper/css/free-mode"
 import "swiper/css/pagination"
 import "swiper/css/navigation"
 import {Autoplay, Navigation, Pagination} from 'swiper/modules'
-import mobileServiceLogo from '../Assets/mobile service logo.jpg';
-import billPaymentServiceLogo from '../Assets/bill payment.jpg';
-import panCardLogo from '../Assets/pan card logo.png';
-import shoopingLogo from '../Assets/shooping logo.jpg';
-import moneyTransLogo from '../Assets/money trabsfer logo.jpg';
-import miniWebLogo from '../Assets/mini website.png';
-import loanServiceLogo from '../Assets/loan service logo.jpg';
-import aepsServiceLogo from '../Assets/aeps service logojpg.jpg'
-import addFundLogo from '../Assets/add fund logo.jpg';
-import bankLogo from '../Assets/Banku_logo.png';
+import mobileServiceLogo from '../Assets/Logos/mobile service logo.jpg';
+import billPaymentServiceLogo from '../Assets/Logos/bill payment.jpg';
+import panCardLogo from '../Assets/Logos/pan card logo.png';
+import shoopingLogo from '../Assets/Logos/shooping logo.jpg';
+import moneyTransLogo from '../Assets/Logos/money trabsfer logo.jpg';
+import miniWebLogo from '../Assets/Logos/mini website.png';
+import loanServiceLogo from '../Assets/Logos/loan service logo.jpg';
+import aepsServiceLogo from '../Assets/Logos/aeps service logojpg.jpg'
+import addFundLogo from '../Assets/Logos/add fund logo.jpg';
+import bankLogo from '../Assets/Logos/Banku_logo.png';
 import { useNavigate } from 'react-router-dom';
 import RecentTransactions from '../Components/Common/RecentTransactions';
 

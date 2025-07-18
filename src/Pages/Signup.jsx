@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
-import BankYouLogo from '../Assets/Bank you logo.png';
+import BankYouLogo from '../Assets/Logos/Bank you logo.png';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css"
 import "swiper/css/free-mode"
@@ -33,13 +33,13 @@ const Signup = () => {
 
   return (
     <div className='w-[100vw] h-[100vh] font-michroma font-normal bg-gray-500 flex justify-center items-center bg-cover bg-center bg-no-repeat' style={{ backgroundImage: 'url("/background.jpg")' }}>
-        <div className='w-full md:w-1/2 bg-white rounded-md flex flex-col justify-center'>
+        <div className='w-full md:w-2/3 bg-white rounded-md flex flex-col justify-center'>
             <div className='flex flex-row justify-evenly items-center p-1'>
                 <img src={BankYouLogo} alt='companyLogo' className='object-cover w-44'/>
             </div>
             <div className='w-full flex flex-row'>
                 {/* IMAGE SLIDER */}
-                <div className='w-[50%] hidden md:block'>
+                <div className='w-[50.2%] hidden md:block'>
                     {/* SWIPER */}
                     <Swiper
                         className='w-full h-full'
