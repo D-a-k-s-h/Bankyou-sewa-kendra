@@ -21,14 +21,6 @@ import AEPSService from "./Pages/Neo Bank/AEPSService";
 function App() {
 
   const {user} = useSelector((state) => state.auth);
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if(user?._id === undefined){
-      //dispatch(logout(navigate));
-    } 
-  },[]);
 
   return (
     <div className="w-screen h-screen flex overflow-hidden">
@@ -36,7 +28,7 @@ function App() {
       <Routes>
         <Route path="/login" element={user ? <Navigate to={"/"}/> : <Login/>}/>
         <Route path="/signup" element={user ? <Navigate to={"/"}/> : <Signup/>}/>
-        <Route path="/" element={!user ? <Dashboard/> : <Navigate to={"/login"}/>}>
+        <Route path="/" element={user ? <Dashboard/> : <Navigate to={"/login"}/>}>
           <Route path="/" element={<Homepage/>}/>
           <Route path="/market-place/mobile-recharge" element={<MobileRecharge/>}/>
           <Route path="/market-place/bill-payment" element={<BillPayment/>}/>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
@@ -11,7 +11,7 @@ import "swiper/css/navigation"
 import {Autoplay} from 'swiper/modules'
 import Slide1 from '../Assets/Slider Images/login page slide 1.png';
 import Slide2 from '../Assets/Slider Images/login page slide 2.png';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { sendOtp, verifyOtp } from '../Services/operations/authAPI';
 import OtpInput from 'react-otp-input';
 import { FaClockRotateLeft } from "react-icons/fa6";
@@ -34,11 +34,14 @@ const Login = () => {
         console.log("LOGIN DATA -> ",data);
         
         if(!otpVisible){
-            await dispatch(sendOtp(data.email));
-            setOtpVisible(true);
+            const result = await dispatch(sendOtp(data.email));
+            if (result) {
+                setOtpVisible(true);
+            }
         }
         else{
-            await dispatch(verifyOtp(data.email,otp,navigate));
+            await dispatch(verifyOtp(data.email, otp, navigate));
+            setOtpVisible(false);
         }
     }
 

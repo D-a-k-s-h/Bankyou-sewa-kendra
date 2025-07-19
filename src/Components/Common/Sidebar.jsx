@@ -6,6 +6,8 @@ import { FaLongArrowAltRight } from 'react-icons/fa';
 import * as Icons from 'react-icons/vsc';
 import { matchPath, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import BankYouLogo from '../../Assets/Logos/Bank you logo.png';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../Slices/authSlice';
 
 const SmoothDetails = ({ summary, children, open, toggle }) => {
   const contentRef = useRef(null);
@@ -39,6 +41,7 @@ const Sidebar = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [openIndex, setOpenIndex] = useState(null);
+  const dispatch = useDispatch();
 
   const sidebarClasses = `
     fixed z-40 top-0 left-0 h-screen w-[16rem] bg-richblack-800 border-r text-richblack-5 flex flex-col gap-7
@@ -73,7 +76,7 @@ const Sidebar = () => {
       <div className={sidebarClasses}>
         <div className='w-full flex flex-row justify-between items-center px-2.5 py-[0.73rem] border-b border-b-black'>
           <img src={BankYouLogo} alt='companyLogo' className='object-cover w-44' />
-          <button type='button' className='btn btn-sm btn-circle btn-error text-white text-lg'><RiLogoutCircleLine /></button>
+          <button type='button' onClick={() => {dispatch(setUser(false)); localStorage.removeItem("user")}} className='btn btn-sm btn-circle btn-error text-white text-lg'><RiLogoutCircleLine /></button>
         </div>
 
         <div className='w-full overflow-auto flex flex-col'>
