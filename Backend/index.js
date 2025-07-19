@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(
     cors({
-        origin:"https://bankyou-sewa-kendra.vercel.app/",
+        origin:"https://bankyou-sewa-kendra.vercel.app",
         credentials:true
     })
 )
