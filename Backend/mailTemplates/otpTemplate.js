@@ -67,7 +67,7 @@ const otpTemplate = (otp) => {
 	<body>
 		<div class="container">
 			<a href="https://bankyou-sewa-kendra.vercel.app/"><img class="logo"
-					src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fhotmart.com%2Fen%2Fmarketplace%2Fproducts%2Fnotion-study-organization-en-us%2FR81716932J&psig=AOvVaw3KzEuyAChtsKaoVOlNxgE4&ust=1741713735989000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKiUw7yDgIwDFQAAAAAdAAAAABAE" alt="Banku Sewa Kendra Logo"></a>
+					src="https://bankyou-sewa-kendra.vercel.app/path/to/Bank%20You%20Logo.png" alt="Banku Sewa Kendra Logo"></a>
 			<div class="message">OTP Verification Email</div>
 			<div class="body">
 				<p>Dear User,</p>

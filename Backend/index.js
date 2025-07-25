@@ -31,3 +31,7 @@ app.use("/",(req,res) => {
         message: "Your server is up and running"
     })
 });
+
+app.get('/healthz',(req,res) => {
+    res.status(200).send('OK');
+});
