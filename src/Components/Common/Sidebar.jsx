@@ -11,7 +11,7 @@ import { setUser } from '../../Slices/authSlice';
 
 const SmoothDetails = ({ summary, children, open, toggle }) => {
   const contentRef = useRef(null);
-  console.log("Children -> ",children);
+  //console.log("Children -> ",children);
   return (
     <div className="w-full my-1 rounded font-michroma">
       <button

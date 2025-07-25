@@ -19,7 +19,7 @@ const AddAccount = ({setModal,mobile}) => {
     const dispatch = useDispatch();
 
     const addSenderHandler = async(data) => {
-        console.log(data);
+        //console.log(data);
 
         setAddDetails("Account");
         toast.success("Sender Added");
@@ -27,7 +27,7 @@ const AddAccount = ({setModal,mobile}) => {
     }
 
     const addAccountHandler = async(data) => {
-        console.log(data);
+        //console.log(data);
 
         dispatch(addDmtData({
             bankHolder: data.bankHolder,

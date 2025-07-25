@@ -14,7 +14,7 @@ const Reports = () => {
     } = useForm();
 
     const submitHandler = async (data) => {
-        console.log("REPORTS DATA -> ", data);
+        //console.log("REPORTS DATA -> ", data);
         reset();
     }
 

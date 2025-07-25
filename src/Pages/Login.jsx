@@ -31,7 +31,7 @@ const Login = () => {
     const [email,setEmail] = useState('');
 
     const submitHandler = async(data) => {
-        console.log("LOGIN DATA -> ",data);
+        //console.log("LOGIN DATA -> ",data);
         
         if(!otpVisible){
             const result = await dispatch(sendOtp(data.email));

@@ -26,7 +26,7 @@ const Signup = () => {
     const [isVisibleConfirmPassword,setIsVisibleConfirmPassword] = useState(false);
 
     const submitHandler = async(data) => {
-        console.log("SIGNUP DATA -> ",data);
+        //console.log("SIGNUP DATA -> ",data);
 
         reset();
     }

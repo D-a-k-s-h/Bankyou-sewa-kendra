@@ -1,7 +1,7 @@
 import { PDFDocument, rgb, StandardFonts } from "pdf-lib";
 
 export const generateCertificates = async({templateUrl,textData}) => {
-    console.log(templateUrl);
+    //console.log(templateUrl);
     const existingPdfBytes = await fetch(templateUrl).then(res => res.arrayBuffer());
     
     //load PDF

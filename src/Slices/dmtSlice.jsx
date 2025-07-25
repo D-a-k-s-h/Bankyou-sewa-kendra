@@ -11,7 +11,7 @@ const dmtSlice = createSlice({
         addDmtData(state,value){
             state.dmtData.push(value.payload);
             localStorage.setItem('dmtData',JSON.stringify(state.dmtData));
-            console.log(state.dmtData);
+            //console.log(state.dmtData);
         }
     }
 });

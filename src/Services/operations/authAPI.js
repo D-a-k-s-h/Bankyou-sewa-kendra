@@ -19,7 +19,7 @@ export function sendOtp(email){
                 throw new Error(response.data.message);
             }
 
-            console.log("SENDOTP_API RESPONSE -> ",response)
+            //console.log("SENDOTP_API RESPONSE -> ",response)
 
             toast.success(`OTP sent to ${email}`);
             result = true; // Indicate success for the calling component
@@ -47,7 +47,7 @@ export function verifyOtp(email, otp,navigate){
                 throw new Error(response.data.message);
             }
 
-            console.log("VERIFY_OTP_API RESPONSE -> ",response)
+            //console.log("VERIFY_OTP_API RESPONSE -> ",response)
 
             toast.success("OTP verified successfully");
 

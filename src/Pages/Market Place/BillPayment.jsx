@@ -78,7 +78,7 @@ const BillPayment = () => {
     const operatorOptions = operatorOptionsMap[tab] || [];
 
     const submitHandler = async (data) => {
-        console.log("BILL PAYMENT DATA -> ", data);
+        //console.log("BILL PAYMENT DATA -> ", data);
 
         setBillDetails({
             operator: data.operator,

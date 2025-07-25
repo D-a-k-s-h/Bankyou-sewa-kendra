@@ -17,10 +17,10 @@ const DomesticMoneyTransfer = () => {
     const {dmtData} = useSelector((state) => state.dmt);
     const [modal,setModal] = useState(false);
     const [mobile, setMobile] = useState(null);
-    console.log("Dmt data -> ",dmtData);
+    //console.log("Dmt data -> ",dmtData);
 
     const submitHandler = async(data) => {
-        console.log("DMT data -> ",data);
+        //console.log("DMT data -> ",data);
 
         setMobile(data.mobileNo);
         const exists = dmtData.some((dmt) => dmt.mobileNo === data.mobileNo);

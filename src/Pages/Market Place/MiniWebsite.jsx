@@ -18,7 +18,7 @@ const MiniWebsite = () => {
     } = useForm();
 
     const submitHandler = async (data) => {
-        console.log("MINI WEBSITE DATA -> ", data);
+        //console.log("MINI WEBSITE DATA -> ", data);
         reset();
     }
 

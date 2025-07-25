@@ -9,7 +9,7 @@ const BillFetch = ({billDetails,setBillDetails,setRechargeSummary}) => {
 
     const handlePayment = () => {
         // Logic to handle payment
-        console.log("Payment initiated for bill:", billDetails);
+        //console.log("Payment initiated for bill:", billDetails);
 
         setRechargeSummary({
             customerName: "Chandan",

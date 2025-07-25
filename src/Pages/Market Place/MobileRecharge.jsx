@@ -32,7 +32,7 @@ const MobileRecharge = () => {
     ]
 
     const submitHandler = async(data) => {
-        console.log("MOBILE RECHARGE DATA -> ",data);
+        //console.log("MOBILE RECHARGE DATA -> ",data);
 
         setRechargeSummary(data);
 

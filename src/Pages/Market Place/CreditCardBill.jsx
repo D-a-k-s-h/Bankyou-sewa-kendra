@@ -27,7 +27,7 @@ const CreditCardBill = () => {
     ];
 
     const submitHandler = async (data) => {
-        console.log("CREDIT CARD BILL DATA -> ", data);
+        //console.log("CREDIT CARD BILL DATA -> ", data);
 
         setBillDetails({
             operator: data.operator,
