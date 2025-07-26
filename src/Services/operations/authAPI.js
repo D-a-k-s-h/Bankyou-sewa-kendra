@@ -49,14 +49,14 @@ export function verifyOtp(email, otp,navigate){
 
             //console.log("VERIFY_OTP_API RESPONSE -> ",response)
 
-            toast.success("OTP verified successfully");
+            toast.success(response?.data?.message);
 
             localStorage.setItem("user",true);
             dispatch(setUser(true));
             navigate('/');
 
         } catch(error){
-            toast.error("OTP verification failed");
+            toast.error("OTP verification failed, please try again");
             console.log(error.message);
         }
         toast.dismiss(toastId);
